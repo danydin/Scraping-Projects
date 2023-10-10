@@ -18,7 +18,6 @@ driver = webdriver.Chrome(service=Service(driver_path), options=options)
 driver.get(url)
 resultsLimit = 4
 
-# while True:
 for i in range(resultsLimit): 
     try:
         load_more_button = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.load_jobs_btn')))
