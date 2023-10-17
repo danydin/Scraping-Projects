@@ -9,16 +9,17 @@ from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import requests
 
-url = 'https://www.drushim.co.il/jobs/search/משרה%20היברידית/?ssaen=1'
+url = 'https://www.drushim.co.il/jobs/search/devops/?ssaen=1'
 
 options = Options()
 options.headless = True
 driver_path = '/opt/homebrew/bin/chromedriver'
 driver = webdriver.Chrome(service=Service(driver_path), options=options)
 driver.get(url)
-resultsLimit = 4
+loadMoreButton = 0
+resultLimit = 3
 
-for i in range(resultsLimit): 
+for i in range(loadMoreButton): 
     try:
         load_more_button = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.load_jobs_btn')))
         load_more_button.click()
@@ -27,9 +28,9 @@ for i in range(resultsLimit):
         break
 
 elements = driver.find_elements(By.CSS_SELECTOR, 'p.display-18.view-on-submit.mb-0')
-for element in elements[:resultsLimit]:
+for element in elements[:resultLimit]:
     driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'});", element)
-    time.sleep(3)
+    time.sleep(3)   
     element.click()
 
 soup = BeautifulSoup(driver.page_source, 'html.parser')
@@ -37,22 +38,28 @@ driver.quit()
 
 titles = []
 descriptions = []
-for job in soup.select('.job-item-main')[:resultsLimit]:
+unique_employee = []
+for job in soup.select('.job-item-main')[:resultLimit]:
     try:
         title = job.select_one('.job-url').text.strip()
+        employee = job.select_one('.flex.grow-none.ml-3').text.strip()
+        if employee not in unique_employee:
+            unique_employee.append(employee)
         description = job.select_one('.layout.job-details-box.vacancyFullDetails.wrap').text.strip()
         titles.append(title)
         descriptions.append(description)
-        print(titles)
 # if AttributeError: 'NoneType' object has no attribute 'text'
     except AttributeError:
         # Handle the error here
         title = job.select_one('.job-url').text.strip()
         description = 'Missing Desc'
         titles.append(title)
+        employee = job.select_one('.flex.grow-none.ml-3').text.strip()
+        if employee not in unique_employee:
+            unique_employee.append(employee)
         descriptions.append(description)
-        print('Missing Desc')
+        print(description)
 
-data = {'Title': titles, 'Description': descriptions}
+data = {'Unique Employees': unique_employee, 'Title': titles, 'Description': descriptions}
 df = pd.DataFrame(data)
 df.to_csv('drushim_jobs.csv', index=False)

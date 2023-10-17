@@ -1,9 +1,45 @@
-Title,Description
-נציג/ת תמיכה טכנית לחברת השקעות משרה היברידית,"תיאור משרה לחברת השקעות נציג/ת תמיכה טכניתהתפקיד כולל:ניהול הרשאות ADתמיכה במערכות ליבה הפנים ארגוניותפתרון תקלות דואר אלקטרונימתן תמיכה בכל סוגי התוכנה והחומרה בארגון*המשרה היברידיתמשרה מלאה בימים א'-ה' בין השעות08:30-17:00*המשרה ממוקמת בת""א , בשדרות רוטשילד 
+Unique Employees,Title,Description
+Logica-IT,DevOps Engineer,"תיאור משרה מס' הזדמנויות יוצאות דופן לאנשי/נשות DevOps שלא כדאי לפספס!עבודה בחברות גלובליות וחברות יציבות עם לקוחות מהגדולים בעולם.ממשקים מרובים ומעניינים, מערכות חשובות וצוותים מקצועיים ומגוונים.מיקומי המשרות בכלל האזורים בארץ - מהדרום (באר שבע) ועד הצפון (כרמיאל). 
     דרישות התפקיד
-   ניסיון של לפחות שנתיים בתמיכת HelpDesk - חובהניסיון בתחומים הבאים : תמיכה ב AD , Exchange, תקלות רשת , תקלות office , תקלות חומרה - חובהניסיון במערכות ליבה ומערכות נוספותתודעת שירות גבוהה , סדר וארגון , יכולת עבודה בצוות , יכולת למידה עצמית  
+   2 + שנות ניסיון כ DevOpsניסיון בעבודה עם K8S/ Dockerניסיון בתהליכי CI/CD וGITניסיון בLinux / WINניסיון בכתיבת קוד בPython/BASH - יתרון משמעותיניסיון בAzure DevOps - יתרון  
       * משרה זו פונה לנשים וגברים כאחד.
      דרישות חובה   
+            לפרופיל החברה ומשרות נוספות
+           > 
+          - סגירת פרטי המשרה
+           פתח משרה בחלון חדש קטגוריה 
+            תחומים
+           
+                  הייטק-תוכנה
+                 
+                  DevOps
+                
+                  Python
+                
+                  Cloud"
+- חסוי -,איש/ת DEVOPS,"תיאור משרה קבוצת יעל מגייסת איש/ת DEVOPS לארגון מוביל במרכז!תיאור התפקיד:- כתיבת קוד בשפות הבאות: Python, Bash, Batch, Powershell, Groovy.- ניסיון HandsOn בכלים הבאים: Git, Bitbucket, Jenkins, Sonarqube, Artifactory, Ansible, Docker, Nginx.- עבודה בסביבת Vmware, Nutanix.- עבודה מול tomcat, iis, etc. 
+    דרישות התפקיד
+   - לפחות 3 שנים ניסיון בתחום ה- DEVOPS.- הכרות וניסיון בתהליכי CICD – חובה.- ניסיון וידע נרחב במערכת הפעלה Linux + Windows – רמה של sysadmin – חובה.- יכולת מוכחת בכתיבת קוד בשפות הבאות: Python ,Bash ,Batch, Powershell ,Groovy (#C יתרון גדול).- ניסיון HandsOn בכלים הבאים: Git, Bitbucket, Jenkins, Sonarqube, Artifactory, Ansible, Docker, Nginx.- ידע וניסיון בעבודה מול Apis.- הבנה ארכיטקטונית עמוקה בעולם התשתיות בדגש גדול על אבטחת מידע.- הכרות טובה עם עולם אבטחת המידע (..pki, security protocols, etc).- MICROSERIVES  - יתרון.- DOCKERS – יתרון.  
+      * משרה זו פונה לנשים וגברים כאחד.
+     דרישות חובה   
+            לפרופיל החברה ומשרות נוספות
+           > 
+          - סגירת פרטי המשרה
+           פתח משרה בחלון חדש קטגוריה 
+            תחומים
+           
+                  הייטק-תוכנה
+                 
+                  DevOps
+                
+                  C#
+                
+                  LINUX / UNIX"
+Comm-IT,DevOps Engineer,"תיאור משרה We are looking for a senior AWS Cloud Engineer/Architect with an ability to deliver, implement and design complex solutions.Responsible for designing and implementing the principles of organization's transition into the cloud, ability to protect customer’s information, applications and networks in the cloud, including the connection to on-prem.You will deliver complex production environments projects such as: servers’ scalability/redundency, Clusters, IoT / Analytics solutions, high workloads/transactional systems, Application migrations, PCI/HIPAA compliance, etc. 
+    דרישות התפקיד
+   Must have:3 years of experience with customer complex production environments.At least 3 years work with AWS Cloud services prior to at least 3 years work with on-prem systems/network/storage/security.Deep understanding and vast deployment capabilities of VPC, Networking, Security, EC2, S3, RDS, VPN, Network Segmentation, Security Groups, ELB, ASG.Vast experience with Operating System: Windows servers and Linux servers.Design and Deploy of High Available & Disaster Recovery solutions.Vast Experience with Active Directory (Managed and unmanaged), IAM, Roles.Well familiar with SSH, HTTPS, Certs, Encryption protocols and implementation.Highly qualified in English writing: Design Documents, Procedures.Team player, Highly Motivated, multi-tasking self-capabilities. Recommended skills:Well Experience with either EKS/ECS/Elastic Beanstalk.Familiar with DevOps pipelines/container orchestration.Automation provisioning using Terraform or Cloud formation.Experience with deployment tools either Jenkins/Ansible/Puppet/Code Pipeline.Familiar with AWS Multi-Account strategy using Landing Zone  
+      * משרה זו פונה לנשים וגברים כאחד.
+     Mandatory Requirements   
             לפרופיל החברה ומשרות נוספות
            > 
           - סגירת פרטי המשרה
@@ -12,62 +48,8 @@ Title,Description
            
                   הייטק-כללי
                  
-                  Help Desk / תמיכה
+                  DevOps
                 
-                  איש/ת IT
+                  sys admin unix
                 
-                  sys admin win"
-נציג/ת תמיכת מוצרים דיגיטאליים -משרה היברידית,"תיאור משרה דרוש/ה נציג/ת תמיכה לצוות המוצרים הדיגיטליים  באדם מילא אנו מציעים לכם להצטרף לצוות המוביל של יחידת האבחון האינטרנטי אשר מטפל בלקוחות בישראל  ובחו""ל.התפקיד כולל תמיכה טכנית ומקצועית ללקוחותינו במגוון רחב של נושאים.משרה מאתגרת ועבודה בסביבה צעירה ודינאמית. 
-    דרישות התפקיד
-   בוגרי תואר ראשון, - יתרון משמעותי!* אוריינטציה טכנית חובה!* אנגלית ברמה טובה מאוד- חובה!, שפה נוספת - יתרון.* עברית שפת אם- חובה  
-      * משרה זו פונה לנשים וגברים כאחד.
-     דרישות חובה   
-            לפרופיל החברה ומשרות נוספות
-           > 
-          - סגירת פרטי המשרה
-           פתח משרה בחלון חדש קטגוריה 
-            תחומים
-           
-                  שירות לקוחות
-                 
-                  תמיכה טכנית
-                
-                  שירות לקוחות
-                
-                  Back office - שירות לקוחות"
-מנהל/ת תיק פנסיוני - משרה היברידית,"תיאור משרה לאגם לידרים סוכנות ביטוח מובילה לניהול הסדרים פנסיונייםדרוש/ה מנהל/ת תיק פנסיונילעבודת שטח הכוללת שירות ומכירות בביטוח פנסיוני למבוטחי הסוכנותעבודה מול מעסיקים ומבוטחי הסוכנותמשרה מלאה 8.5 שעות 5 ימים בשבועעבודה היברידית 
-    דרישות התפקיד
-   רישיון בביטוח פנסיוני – חובהידע בביטוח פנסיוני – יתרוןניסיון בתחום – יתרוןרישיון נהיגה – חובה  
-      * משרה זו פונה לנשים וגברים כאחד.
-     דרישות חובה   
-            לפרופיל החברה ומשרות נוספות
-           > 
-          - סגירת פרטי המשרה
-           פתח משרה בחלון חדש קטגוריה 
-            תחומים
-           
-                  ביטוח
-                 
-                  איש/ת מכירות ביטוח
-                
-                  יועץ/ת פנסיוני/ת
-                
-                  מנהל/ת תיקי לקוחות"
-נציג/ת תביעות רכב למשרה היברידית!,"תיאור משרה - מתן מענה טלפוני ללקוחות החברה בתחום התביעות - טיפול בפניות הלקוחות מקצה לקצה עד לסגירת הפניה - התנהלות מול מחלקות החברה השונות 
-    דרישות התפקיד
-   - היכרות עם סביבת עבודה ממוחשבת- ניסיון בשירות לקוחות - יתרון* הפניקס מעודדת ותומכת בהעסקת עובדים עם מוגבלות  
-      * משרה זו פונה לנשים וגברים כאחד.
-     דרישות חובה   
-            לפרופיל החברה ומשרות נוספות
-           > 
-          - סגירת פרטי המשרה
-           פתח משרה בחלון חדש קטגוריה 
-            תחומים
-           
-                  שירות לקוחות
-                 
-                  מוקדן/ית
-                
-                  שירות לקוחות
-                
-                  Back office - שירות לקוחות"
+                  Cloud"
