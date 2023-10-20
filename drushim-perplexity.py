@@ -9,15 +9,15 @@ from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import requests
 
-url = 'https://www.drushim.co.il/jobs/search/devops/?ssaen=1'
+url = 'https://www.drushim.co.il/jobs/search/%D7%9E%D7%A9%D7%A8%D7%94%20%D7%94%D7%99%D7%91%D7%A8%D7%99%D7%93%D7%99%D7%AA/?ssaen=1'
 
 options = Options()
 options.headless = True
 driver_path = '/opt/homebrew/bin/chromedriver'
 driver = webdriver.Chrome(service=Service(driver_path), options=options)
 driver.get(url)
-loadMoreButton = 0
-resultLimit = 3
+loadMoreButton = 9999
+resultLimit = 9999
 
 for i in range(loadMoreButton): 
     try:
