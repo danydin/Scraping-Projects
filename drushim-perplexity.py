@@ -16,7 +16,7 @@ driver_path = '/opt/homebrew/bin/chromedriver'
 driver = webdriver.Chrome(service=Service(driver_path), options=options)
 driver.get(url)
 loadMoreButton = 9999
-resultLimit = 9999
+resultLimit = 999
 
 for i in range(loadMoreButton): 
     try:
