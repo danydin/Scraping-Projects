@@ -27,15 +27,15 @@ def write_csv(file, column, row):
     csv1.write(row)
 
 driver_path = '/opt/homebrew/bin/chromedriver'
-opt = webdriver.FirefoxOptions()
-opt.add_argument("--headless")
-web = webdriver.Firefox(service=Service(driver_path),options=opt)
+opt = webdriver.ChromeOptions()
+# opt.add_argument("--headless")
+web = webdriver.Chrome(service=Service(driver_path),options=opt)
 web.implicitly_wait(10)
 
 web.get(url)
 
 num = 1
-print('\nstarted scraiping...\n')
+print('\n started scraiping... \n')
 while True:
     try:
         try:

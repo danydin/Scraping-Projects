@@ -1,4 +1,4 @@
-#!/Users/din/VSC-Projects/Bots-Automation-Scraping/drushim.co.il/venv/bin/python3.11
+#!/Users/din/VSC-Projects/Python/Scraping/drushim.co.il/venv/bin/python3.11
 # -*- coding: utf-8 -*-
 import re
 import sys
