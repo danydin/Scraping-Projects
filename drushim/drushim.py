@@ -51,31 +51,34 @@ while True:
                 break
 
         box = box.find_elements(By.TAG_NAME, "div")
-        # click on + לצפייה בפרטי המשרה
-        box[-8].click()
+        # # click on + לצפייה בפרטי המשרה
+        # box[-8].click()
         title = box[2].text
         company = box[15].text
-        title_2 = box[13].text.replace("\n", "")
-        for description in box:
-            text = description.text
-            if "תיאור משרה" in text:
-                job_desc = text.replace("\n", "").replace(",", ".")
-            if "דרישות התפקיד" in text:
-                req = text.replace("\n", "").replace(",", ".")
+        # issue printing it without cling the box first
+        # title_2 = box[13].text.replace("\n", "")
+        # print(title_2)
+        # for description in box:
+        #     text = description.text
+        #     if "תיאור משרה" in text:
+        #         job_desc = text.replace("\n", "").replace(",", ".")
+        #     if "דרישות התפקיד" in text:
+        #         req = text.replace("\n", "").replace(",", ".")
 
-        box = web.find_element(By.CSS_SELECTOR, box_css_selector(num))
-        box1 = box.find_elements(By.TAG_NAME, "a")
-        box2 = box.find_elements(By.TAG_NAME, "tbody")
-        box2 = [b.text for b in box2]
-        catagory = box2[0].replace("\n", " & ")
-        link = box1[3].get_attribute("href")
+        # box = web.find_element(By.CSS_SELECTOR, box_css_selector(num))
+        # box1 = box.find_elements(By.TAG_NAME, "a")
+        # box2 = box.find_elements(By.TAG_NAME, "tbody")
+        # box2 = [b.text for b in box2]
+        # catagory = box2[0].replace("\n", " & ")
+        # link = box1[3].get_attribute("href")
         print(
-            f"Title 1 : {title} \n Title 2 : {title_2} \n job desc: {job_desc} \n {req}"
+            f"/n Title 1 : {title} \n Comapny: {company}"
         )
         head = (
             "Title 1, Company, Title 2, Job description, Requirments, Link, Categories"
         )
-        line = f"{title},{company},{title_2},{job_desc},{req},{link},{catagory}"
+        # line = f"{title},{company},{title_2},{job_desc},{req},{link},{catagory}"
+        line = f"{title},{company}"
         num += 1
         print(num)
         write_csv(file_name, head, line)
