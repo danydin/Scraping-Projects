@@ -3,18 +3,27 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 import datetime, csv, re
 
-current_time = datetime.datetime.now()
-formatted_time = current_time.strftime("%d.%m %H_%M")
-file_name = f"drushim {formatted_time}.csv"
-
 driver_path = "/opt/homebrew/bin/chromedriver"
 opt = webdriver.ChromeOptions()
 opt.add_argument("--headless")
 web = webdriver.Chrome(service=Service(driver_path), options=opt)
 web.implicitly_wait(10)
-url = "https://www.drushim.co.il/jobs/search/טכנאי%2Fת/?ssaen=1"
+# https://www.drushim.co.il/jobs/search/טכנאי%2Fת/?ssaen=1
+url = "https://www.drushim.co.il/jobs/search/devops/?ssaen=1"
 web.get(url)
 
+current_time = datetime.datetime.now()
+formatted_time = current_time.strftime("%d.%m") #  %H_%M
+
+# when find exact word /search/ then start a group using brackets () - square brackets also called charcter class with [^] sign means it will negates everything after the ^ so it negats the slash but match everything that not listed inside the [] the + means 1 or more charcaters and the /? means until it find salsh 0 or more times - used for csv purposes
+pattern = r'/search/([^/]+)/?'
+# Find the match
+regex_search = re.search(pattern, url)
+if regex_search:
+    # Extract the word between the slashes after the /search/ in the url below
+    drushim_search_term = regex_search.group(1)
+
+file_name = f"{drushim_search_term} {formatted_time}.csv"
 
 def load_more_btn():
     web.find_element(By.CSS_SELECTOR, ".load_jobs_btn").click()
@@ -63,9 +72,9 @@ while True:
         jobs_rows.append((title, company, job_desc, req, categories,link))
         num+=1
         # break after specific iteration
-        if num == 720:
+        if num == 5:
             break
-        # break loop if completed scraping all listings
+        # else break loop if completed scraping all listings
         if num == int(total_listings)+1:
             break
     except Exception as e:
