@@ -25,13 +25,13 @@ jobs_rows = []
 total_listings_text = web.find_element(By.CSS_SELECTOR, 'h2.display-36-24.primary--text').text
 total_listings = re.findall(r'\d+',total_listings_text)[0]
 
+num = 1
+
 def write_csv(file, rows):
     with open(file, "w", encoding="utf-8") as csv_file:
         writer = csv.writer(csv_file)
         writer.writerow(header)
         writer.writerows(rows)
-
-num = 1
 
 print(f"\n started scraping {total_listings} listings \n")
 
@@ -61,10 +61,10 @@ while True:
         categories = box2[0].replace("\n", " & ")
         link = box1[3].get_attribute("href")
         jobs_rows.append((title, company, job_desc, req, categories,link))
-        # if want to limit results
-        if num==1:
-            break
         num+=1
+        # break after specific iteration
+        if num == 720:
+            break
         # break loop if completed scraping all listings
         if num == int(total_listings)+1:
             break
@@ -79,5 +79,6 @@ while True:
         else:
             print(e)
             break
-print(f"\nFinished scraping successfully {num-1} out of {total_listings} listings \n")
+
 write_csv(file_name, jobs_rows)
+print(f"\nFinished scraping successfully {num-1} out of {total_listings} listings \n")
