@@ -5,19 +5,18 @@ import datetime, csv, re
 
 driver_path = "/opt/homebrew/bin/chromedriver"
 opt = webdriver.ChromeOptions()
-opt.add_argument("--headless")
+# opt.add_argument("--headless")
 web = webdriver.Chrome(service=Service(driver_path), options=opt)
 web.implicitly_wait(10)
 # https://www.drushim.co.il/jobs/search/טכנאי%2Fת/?ssaen=1
-url = "https://www.drushim.co.il/jobs/search/devops/?ssaen=1"
+url = "https://www.drushim.co.il/jobs/area/1/?searchterm=הכשרה&geolexid=540298&range=2&ssaen=1"
 web.get(url)
 
 current_time = datetime.datetime.now()
 formatted_time = current_time.strftime("%d.%m") #  %H_%M
 
 # when find exact word /search/ then start a group using brackets () - square brackets also called charcter class with [^] sign means it will negates everything after the ^ so it negats the slash but match everything that not listed inside the [] the + means 1 or more charcaters and the /? means until it find salsh 0 or more times - used for csv purposes
-pattern = r'/search/([^/]+)/?'
-# Find the match
+pattern = r'/?searchterm=([^&]+)&?'
 regex_search = re.search(pattern, url)
 if regex_search:
     # Extract the word between the slashes after the /search/ in the url below
@@ -72,8 +71,8 @@ while True:
         jobs_rows.append((title, company, job_desc, req, categories,link))
         num+=1
         # break after specific iteration
-        if num == 5:
-            break
+        # if num == 5:
+        #     break
         # else break loop if completed scraping all listings
         if num == int(total_listings)+1:
             break
