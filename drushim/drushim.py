@@ -9,7 +9,7 @@ opt = webdriver.ChromeOptions()
 web = webdriver.Chrome(service=Service(driver_path), options=opt)
 web.implicitly_wait(10)
 # https://www.drushim.co.il/jobs/search/טכנאי%2Fת/?ssaen=1
-url = "https://www.drushim.co.il/jobs/area/1/?searchterm=הכשרה&geolexid=540298&range=2&ssaen=1"
+url = "https://www.drushim.co.il/jobs/search/טכנאי/?experience=2&ssaen=3"
 web.get(url)
 
 current_time = datetime.datetime.now()
